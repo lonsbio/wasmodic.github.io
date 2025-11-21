@@ -29,7 +29,11 @@ jobs:
             
       - name: Install
         run: npm install
-
+      - name: Install svelte
+        run: npm install svelte typescript
+      - name: Install astro
+        run: npm install @astrojs/svelte
+        
       - name: Build
         run: npm run build
         env:
