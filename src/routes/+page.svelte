@@ -1,16 +1,47 @@
 <script>
     import Terminal from '$components/Terminal.svelte';
 
+    
+const references = [
+        {
+            name: 'WebAssembly (Wasm)',
+            description: 'The instruction format for a stack-based virtual machine',
+            link: 'https://webassembly.org/'
+        },{
+            name: 'Emscripten',
+            description: 'Compiler toolchain to WebAssembly',
+            link: 'https://emscripten.org/'
+        },
+        
+        
+    ];
+
+const examples = [
+        {
+            name: 'Pyodide',
+            description: 'Python running in the browser via WebAssembly',
+            link: 'https://pyodide.org/en/stable/'
+        },
+		{
+            name: 'Biowasm',
+            description: 'A collection of bioinformatics tools compiled to WebAssembly',
+            link: 'https://biowasm.com/'
+        },
+		{
+            name: 'WebR',
+            description: 'R compiled for the browser and Node.js using WebAssembly, via Emscripten',
+            link: 'https://docs.r-wasm.org/webr/latest/'
+        },
+
+       
+    ];
+
+
     const links = [
         {
             name: 'JupyterLite',
             description: 'JupyterLab running entirely in the browser using WebAssembly',
             link: 'https://wasmodic.github.io/jupyterlite/'
-        },
-        {
-            name: 'Pyodide',
-            description: 'Python running in the browser via WebAssembly',
-            link: 'https://pyodide.org/en/stable/'
         },
         {
             name: 'WebR',
@@ -23,17 +54,13 @@
             link: 'https://wasmodic.github.io/pyscript/'
         },
         {
-            name: 'Biowasm',
-            description: 'A collection of bioinformatics tools compiled to WebAssembly',
-            link: 'https://biowasm.com/'
-        },
-        {
             name: 'ShinyLive',
             description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
         }
         
     ];
+
 
 const rows = [
 	{ position: '0', name: 'Iron', symbol: 'Fe', atomic_no: '26' },
@@ -101,6 +128,24 @@ const rows = [
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each links as link}
             <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
+                <h3 class="h4 group-hover:underline">{link.name}</h3>
+                <p class="opacity-70">{link.description}</p>
+            </a>
+        {/each}
+    </section>
+  <!-- Reference Links Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
+        {#each examples as link}
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-primary hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
+                <h3 class="h4 group-hover:underline">{link.name}</h3>
+                <p class="opacity-70">{link.description}</p>
+            </a>
+        {/each}
+    </section>
+  <!-- Examples Links Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
+        {#each references as link}
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
                 <h3 class="h4 group-hover:underline">{link.name}</h3>
                 <p class="opacity-70">{link.description}</p>
             </a>
