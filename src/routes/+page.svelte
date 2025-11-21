@@ -1,7 +1,7 @@
 <script>
     import Terminal from '$components/Terminal.svelte';
 
-    const demos = [
+    const links = [
         {
             name: 'JupyterLite',
             description: 'JupyterLab running entirely in the browser using WebAssembly',
@@ -50,9 +50,9 @@
     </header>
         
 
-    <div class="card preset-filled-surface-100-900 border border-surface-200-800 divide-surface-200-800 divide-y overflow-hidden">
+    <div class="card preset-filled-surface-100-900 border border-surface-200-800 divide-surface-200-800 divide-y overflow-hidden ">
         <!-- Terminal Content -->
-        <article class="p-0">
+        <article class="p-0 bg-black">
             <Terminal
                 on:status={(event) => (console.log('Terminal status:', event.detail))}
                 tools={['csvtk']}
@@ -70,10 +70,10 @@
 
      <!-- Demo Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
-        {#each demos as demo}
-            <a href={demo.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
-                <h3 class="h4 group-hover:underline">{demo.name}</h3>
-                <p class="opacity-70">{demo.description}</p>
+        {#each links as link}
+            <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
+                <h3 class="h4 group-hover:underline">{link.name}</h3>
+                <p class="opacity-70">{link.description}</p>
             </a>
         {/each}
     </section>
