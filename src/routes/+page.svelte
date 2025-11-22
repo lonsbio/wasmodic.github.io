@@ -9,7 +9,7 @@
         },
         {
             name: 'Pyodide',
-            description: 'Python running in the browser via WebAssembly to do simple DNA sequence analysis: it computes GC content and the reverse complement.',
+            description: 'Python running in the browser via WebAssembly',
             link: 'https://wasmodic.github.io/pyodide/'
         },
         {
