@@ -18,17 +18,17 @@ const references = [
 
 const examples = [
         {
-            name: 'Pyodide',
+            name: 'Pyodide Homepage',
             description: 'Python running in the browser via WebAssembly',
             link: 'https://pyodide.org/en/stable/'
         },
 		{
-            name: 'Biowasm',
+            name: 'Biowasm Overview',
             description: 'A collection of bioinformatics tools compiled to WebAssembly',
             link: 'https://biowasm.com/'
         },
 		{
-            name: 'WebR',
+            name: 'WebR Documentation',
             description: 'R compiled for the browser and Node.js using WebAssembly, via Emscripten',
             link: 'https://docs.r-wasm.org/webr/latest/'
         },
@@ -39,24 +39,34 @@ const examples = [
 
     const links = [
         {
-            name: 'JupyterLite',
+            name: 'JupyterLite Exercise',
             description: 'JupyterLab running entirely in the browser using WebAssembly',
             link: 'https://wasmodic.github.io/jupyterlite/'
         },
+{
+            name: 'BioWasm Exercise',
+            description: '',
+            link: 'https://blog.wytamma.com/embl-ebi-muscle-wasm/'
+        },
         {
-            name: 'WebR',
+            name: 'WebR Exercise',
             description: 'R running in the browser via WebAssembly',
             link: 'https://wasmodic.github.io/webr/'
         },
         {
-            name: 'Pyscript',
+            name: 'Pyscript Exercise',
             description: 'PyScript makes it easy to create rich Python applications in the browser using HTML components', 
             link: 'https://wasmodic.github.io/pyscript/'
         },
         {
-            name: 'ShinyLive',
+            name: 'ShinyLive Exercise',
             description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
+        },
+		{
+            name: 'Compiled Rust Exercise',
+            description: 'Compiling Rust to run in Wasm',
+            link: ''
         }
         
     ];
@@ -124,6 +134,8 @@ const rows = [
         </footer>
     </div>
 
+        <h4 class="h4">Practical Exercises</h4>
+
      <!-- Demo Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each links as link}
@@ -133,6 +145,8 @@ const rows = [
             </a>
         {/each}
     </section>
+        <h4 class="h4">References</h4>
+
   <!-- Reference Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each examples as link}
@@ -143,6 +157,8 @@ const rows = [
         {/each}
     </section>
   <!-- Examples Links Grid -->
+        <h4 class="h4">References</h4>
+
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each references as link}
             <a href={link.link} target="_blank" rel="noopener noreferrer" class="card preset-tonal-secondary hover:preset-filled transition-all duration-200 p-6 space-y-2 group">
