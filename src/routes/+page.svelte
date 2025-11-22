@@ -9,8 +9,8 @@
         },
         {
             name: 'Pyodide',
-            description: 'Python running in the browser via WebAssembly',
-            link: 'https://pyodide.org/en/stable/'
+            description: 'Python running in the browser via WebAssembly to do simple DNA sequence analysis: it computes GC content and the reverse complement.',
+            link: 'https://wasmodic.github.io/pyodide/'
         },
         {
             name: 'WebR',
@@ -23,9 +23,9 @@
             link: 'https://wasmodic.github.io/pyscript/'
         },
         {
-            name: 'Biowasm',
-            description: 'A collection of bioinformatics tools compiled to WebAssembly',
-            link: 'https://biowasm.com/'
+            name: 'Biowasm MUSCLE',
+            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
+            link: 'https://wasmodic.github.io/svelte-biowasm/'
         },
         {
             name: 'ShinyLive',
@@ -33,6 +33,16 @@
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
         }
         
+    ];
+    const tableData = [
+        { name: 'Introduction to WebAssembly', presenter: 'Wytamma Wirth', time: '1:30 - 1:40 PM' },
+        { name: 'History of WebAssembly', presenter: 'Torsten Seemann', time: '1:40 - 1:55 PM' },
+        { name: 'Intro to Web Development', presenter: 'Leo Featherstone', time: '1:55 - 2:05 PM' },
+        { name: 'Bioinformatics Use Cases for WebAssembly', presenter: 'Wytamma Wirth', time: '2:05 - 2:25 PM' },
+        { name: 'Practical Walkthrough: Compiling Rust to Biowasm' , presenter: 'Andrew Lonsdale', time: '2:25 - 2:40 PM' },
+        { name: 'Hackathon Explanation and Setup', presenter: 'Wytamma Wirth', time: '2:40 - 3:00 PM' },
+        { name: 'Break', presenter: '', time: '3:00 - 3:30 PM' },
+        { name: 'Hackathon Time', presenter: 'All Participants', time: '3:30 - 5:00 PM' }
     ];
 </script>
 
@@ -68,6 +78,8 @@
         </footer>
     </div>
 
+    <h2 class="h4 mt-8">Demo Links</h2>
+    <p class="mt-2">Explore these WebAssembly-based demos that run entirely in your browser</p>
      <!-- Demo Links Grid -->
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6 mb-8">
         {#each links as link}
@@ -77,4 +89,34 @@
             </a>
         {/each}
     </section>
+    <h2 class="h4 mt-8">Workshop Schedule</h2>
+    <p class="mt-2">Below is the tentative schedule for the workshop:</p>
+    <div class="table-wrap">
+        <table class="table caption-bottom">
+            <caption class="pt-4">We reserve the right to adapt or change the schedule at runtime</caption>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Presenter</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+            <tbody class="[&>tr]:hover:preset-tonal-primary">
+                {#each tableData as row}
+                    <tr>
+                        <td>{row.name}</td>
+                        <td>{row.presenter}</td>
+                        <td>{row.time}</td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
+    </div>
+    <h2 class="h4 mt-8">Resources</h2>
+    <p class="mt-2">Here are some useful resources to get started with WebAssembly in bioinformatics:</p>
+    <ul class="list-disc list-inside mt-4 space-y-2">
+        <li><a class="underline" href="https://webassembly.org/">WebAssembly Official Site</a></li>
+        <li><a class="underline" href="https://emscripten.org/">Emscripten Documentation</a></li>
+    </ul>
+
 </main>
