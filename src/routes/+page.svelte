@@ -60,9 +60,9 @@
     </header>
         
 
-    <div class="card preset-filled-surface-100-900 border border-surface-200-800 divide-surface-200-800 divide-y overflow-hidden ">
+    <div class="card preset-filled-surface-100-900 border border-surface-200-800 divide-surface-200-800 divide-y">
         <!-- Terminal Content -->
-        <article class="p-0 bg-black">
+        <article class="p-0 bg-black min-h-96">
             <Terminal
                 on:status={(event) => (console.log('Terminal status:', event.detail))}
                 tools={['csvtk']}
@@ -70,12 +70,12 @@
         </article>
         
         <!-- Footer -->
-        <!-- <footer class="flex items-center justify-between gap-4 p-4">
+        <footer class="flex items-center justify-between gap-4 p-4">
             <small class="opacity-60">Modified from <a 
                 class="underline"
                 href="https://sandbox.bio">sandbox.bio</a></small>
             <small class="opacity-60">ABACBS Wasm Workshop</small>
-        </footer> -->
+        </footer>
     </div>
 
     <h2 class="h4 mt-8">Demo Links</h2>

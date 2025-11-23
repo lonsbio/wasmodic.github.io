@@ -489,7 +489,7 @@ async function mountLocalFile(event: Event): Promise<void> {
 <style>
 /* Xterm */
 #terminal {
-	height: 400px;
+	/* height: 400px; */
 	overflow: hidden;
 }
 
