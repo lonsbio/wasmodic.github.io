@@ -1,19 +1,16 @@
 <script>
     import Terminal from '$components/Terminal.svelte';
 
+
+
     const links = [
-        {
-            name: 'Biowasm MUSCLE',
-            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
-            link: 'https://wasmodic.github.io/svelte-biowasm/'
-        },
         {
             name: 'WebR',
             description: 'R running in the browser via WebAssembly to perform bioinformatics analyses',
             link: 'https://wasmodic.github.io/webr/'
         },
         {
-            name: 'Pyscript',
+            name: 'Pyscript Exercise',
             description: 'PyScript makes it easy to create rich Python applications in the browser using HTML components', 
             link: 'https://wasmodic.github.io/pyscript/'
         },
@@ -31,6 +28,11 @@
             name: 'ShinyLive',
             description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
+        },
+		{
+            name: 'Compiled Rust Exercise',
+            description: 'Compiling Rust to run in Wasm',
+            link: ''
         }
         
     ];
@@ -68,7 +70,8 @@
                 tools={['csvtk']}
             />
         </article>
-        
+
+
         <!-- Footer -->
         <footer class="flex items-center justify-between gap-4 p-4">
             <small class="opacity-60">Modified from <a 
@@ -117,6 +120,16 @@
     <ul class="list-disc list-inside mt-4 space-y-2">
         <li><a class="underline" href="https://webassembly.org/">WebAssembly Official Site</a></li>
         <li><a class="underline" href="https://emscripten.org/">Emscripten Documentation</a></li>
+       <li><a class="underline" href="https://biowasm.com/">Biowasm Overview</a></li>
+       <li><a class="underline" href="https://docs.r-wasm.org/webr/latest/">WebR Documnetation</a></li>
+	       <li><a class="underline" href="https://docs.pyscript.net/2025.11.2/">PyScript Documentation</a></li>
+	       <li><a class="underline" href="https://pyodide.org/en/stable/">Pyodide Documentation</a></li>
+	       <li><a class="underline" href="https://jupyterlite.readthedocs.io/en/stable/">JupyterLite Documentation</a></li>
+	       <li><a class="underline" href="https://posit-dev.github.io/r-shinylive/">Shinylive R Documentation</a></li>
+	       <li><a class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive R Documentation</a></li>
+
+     
+ 
     </ul>
 
 </main>
