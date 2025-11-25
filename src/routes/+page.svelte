@@ -4,7 +4,11 @@
 
 
     const links = [
-        {
+          {
+            name: 'Biowasm MUSCLE',
+            description: 'MUSCLE (MUltiple Sequence Comparison by Log-Expectation) running entirely in your browser via Biowasm',
+            link: 'https://wasmodic.github.io/svelte-biowasm/'
+        },{
             name: 'WebR',
             description: 'R running in the browser via WebAssembly to perform bioinformatics analyses',
             link: 'https://wasmodic.github.io/webr/'
@@ -28,11 +32,6 @@
             name: 'ShinyLive',
             description: 'Run R/Python Shiny applications entirely in the browser using WebAssembly',
             link: 'https://shinylive.io/py/app/#gist=145aeacadb9bfe52ea708c6a0574f9a4'
-        },
-		{
-            name: 'Compiled Rust Exercise',
-            description: 'Compiling Rust to run in Wasm',
-            link: ''
         }
         
     ];
