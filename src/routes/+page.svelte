@@ -149,6 +149,7 @@
 	       <li><a target="_blank"class="underline" href="https://shinylive.io/r/examples/">Shinylive R Examples</a></li>
 		   	<li><a target="_blank"class="underline" href="https://shiny.posit.co/py/get-started/shinylive.html">Shinylive Python Documentation</a></li>
 			<li><a target="_blank"class="underline" href="https://shinylive.io/py/examples/">Shinylive Python Exmaples</a></li>
+            <li><a target="_blank"class="underline" href="/Wasm-workshop-ABACBS.pdf">Slides</a></li>
 
 
  
