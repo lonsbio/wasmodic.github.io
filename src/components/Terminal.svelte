@@ -124,17 +124,17 @@ function initialize(id: string): void {
 	// Create emulator
 	const envInfo = getEnvironmentInfo();
 	$cli.emulator = new V86({
-		wasm_path: `${envInfo.url}/v86/v86.wasm`,
+		wasm_path: `${envInfo.url}/wasmodic.github.io/v86/v86.wasm`,
 		memory_size: 512 * 1024 * 1024,
         vga_memory_size: 8 * 1024 * 1024,
 		// initial_state: { url: `${envInfo.url}/v86/${envInfo.v86}debian-state-${DEBIAN_STATE_ID}.bin.zst` },
-		initial_state: { url: `${envInfo.url}/v86/alpine-state.bin.zst`, size: 50 * 1024 * 1024 },
+		initial_state: { url: `${envInfo.url}/wasmodic.github.io/v86/alpine-state.bin.zst`, size: 50 * 1024 * 1024 },
 		filesystem: { 
-			baseurl: `${envInfo.url}/v86/alpine-rootfs-flat/`,
-			basefs: `${envInfo.url}/v86/alpine-fs.json`,
+			baseurl: `${envInfo.url}/wasmodic.github.io/v86/alpine-rootfs-flat/`,
+			basefs: `${envInfo.url}/wasmodic.github.io/v86/alpine-fs.json`,
 		},
-		bios: { url: `${envInfo.url}/v86/bios/seabios.bin`, size: 512 * 1024 },
-        vga_bios: { url: `${envInfo.url}/v86/bios/vgabios.bin`, size: 512 * 1024 },
+		bios: { url: `${envInfo.url}/wasmodic.github.io/v86/bios/seabios.bin`, size: 512 * 1024 },
+        vga_bios: { url: `${envInfo.url}/wasmodic.github.io/v86/bios/vgabios.bin`, size: 512 * 1024 },
 		autostart: true,
 		screen_container: DEBUG ? document.getElementById("screen_container") : null,
 		serial_container_xtermjs: divXtermTerminal,
